@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <BackButton/>
     <div class="row justify-center">
       <h1>About This App</h1>
     </div>
@@ -64,7 +63,6 @@
 import { openURL } from 'quasar'
 export default {
   name: 'PageAbout',
-  components: { BackButton: require('components/BackButton').default },
   methods: {
 			visitOurWebsite() {
 				openURL('https://github.com/harbisonApps')

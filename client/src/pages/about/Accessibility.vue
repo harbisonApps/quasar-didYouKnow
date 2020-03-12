@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <BackButton/>
     <div class="row justify-center">
         <h1>Accessibility Statement</h1>
     </div>
@@ -81,8 +80,7 @@
 <script>
 
 export default {
-  name: 'PageAccess',
-  components: { 'BackButton': require('components/BackButton').default }
+  name: 'PageAccess'
 }
 </script>
 <style scoped>

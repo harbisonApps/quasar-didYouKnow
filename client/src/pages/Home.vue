@@ -3,7 +3,7 @@
     <div class="row justify-center q-mb-md">
       <img
         alt="Quasar logo"
-        src="~assets/quasar-logo-full.svg"
+        src="~assets/home_banner.png"
       >
     </div>
   </q-page>

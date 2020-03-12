@@ -1,7 +1,5 @@
 <template>
     <q-page padding >
-      <BackButton/>
-      <br>
       <div class="row justify-center">
         <q-card class="auth-tabs">
         <q-tabs
@@ -33,8 +31,7 @@
 export default {
     name: 'PageAuth',
     components: {
-        LoginRegister: require("components/auth/LoginRegister.vue").default,
-        BackButton: require('components/BackButton').default
+        LoginRegister: require("components/auth/LoginRegister.vue").default
     },
     data () {
     return {

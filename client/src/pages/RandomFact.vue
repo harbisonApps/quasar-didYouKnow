@@ -1,7 +1,6 @@
 <template>
     <q-page padding>
-      <BackButton/>
-        <div class="row justify-center q-mb-md">
+      <div class="row justify-center q-mb-md">
         <q-img src="~assets/reading_list.svg" style="max-width: 450px;"
             contain/>
         </div>
@@ -35,7 +34,6 @@
  //import {mapGetters} from 'vuex'
 export default {
     name: 'PageRandomFact',
-    components: { BackButton: require('components/BackButton').default },
     props: ['fact'],
     computed: {
 //	  	...mapGetters('facts', ['fact'])

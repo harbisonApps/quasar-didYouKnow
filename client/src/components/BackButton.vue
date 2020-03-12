@@ -1,6 +1,6 @@
 <template>
     <div>
-        <q-btn color="secondary" @click="$router.go(-1)">back</q-btn>
+        <q-btn label="back" icon="arrow_back" flat @click="$router.go(-1)"/>
     </div>
 </template>
 <script>

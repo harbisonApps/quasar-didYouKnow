@@ -1,6 +1,5 @@
 <template>
   <q-page padding>
-    <BackButton/>
     <div class="row justify-center">
       <h1>Help</h1>
     </div>
@@ -16,6 +15,5 @@
 <script>
 export default {
   name: 'PageHelp',
-  components: { 'BackButton': require('components/BackButton').default }
 }
 </script>

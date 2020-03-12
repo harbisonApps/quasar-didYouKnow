@@ -10,11 +10,10 @@
           aria-label="Menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
-        <q-toolbar-title class="absolute-center q-pr-xl">
+        <BackButton/>
+        <q-toolbar-title class="absolute-center q-pl-xl q-ml-xl">
            Did You Know
         </q-toolbar-title>
-        <q-btn v-if="!loggedIn" flat to="/auth" class="absolute-right" icon-right="account_circle" label="login" />
-        <q-btn @click="logoutUser" v-else flat class="absolute-right" label="logout" />
       </q-toolbar>
     </q-header>
 
@@ -45,12 +44,28 @@
             <q-item-label>{{ nav.label }}</q-item-label>
           </q-item-section>
         </q-item>
-        <q-item exact class="text-black" clickable to="about/accessibility">
+        <q-item exact class="text-black" clickable to="/about/accessibility">
           <q-item-section avatar>
             <q-icon name="accessibility_new"/>
           </q-item-section>
           <q-item-section>
             <q-item-label>Accessibility</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item v-if="!loggedIn" exact class="text-black" clickable to="/auth">
+          <q-item-section avatar>
+            <q-icon name="account_circle"/>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>Login</q-item-label>
+          </q-item-section>
+        </q-item>
+        <q-item v-else exact class="text-black" clickable to="/auth">
+          <q-item-section avatar>
+            <q-icon name="account_circle"/>
+          </q-item-section>
+          <q-item-section>
+            <q-item-label>LogOut</q-item-label>
           </q-item-section>
         </q-item>
       </q-list>
@@ -79,7 +94,7 @@ export default {
   name: 'MainLayout',
 
   components: {
-    // EssentialLink
+    BackButton: require('components/BackButton').default 
   },
 
   data () {
