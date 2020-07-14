@@ -83,8 +83,9 @@ module.exports = function (ctx) {
       vueRouterMode: "history", // available values: 'hash', 'history'
 
       // rtl: false, // https://quasar.dev/options/rtl-support
-      // showProgress: false,
-      // gzip: true,
+      showProgress: true,
+      gzip: true,
+      devtool: 'source-map',
       // analyze: true,
 
       // Options below are automatically set depending on the env, set them if you want to override
@@ -114,7 +115,9 @@ module.exports = function (ctx) {
 
     // animations: 'all', // --- includes all animations
     // https://quasar.dev/options/animations
-    animations: [],
+    animations: 
+      'all'
+    ,
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
